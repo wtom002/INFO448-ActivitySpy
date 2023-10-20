@@ -1,0 +1,37 @@
+package edu.uw.ischool.wtom002.activityspy
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+class MainActivity : AppCompatActivity() {
+
+    private val TAG = "ActivitySpy"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        Log.i(TAG, "onCreate event fired")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i(TAG, "onResume event fired")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i(TAG, "onPause event fired")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i(TAG, "onStop event fired")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i(TAG, "onDestroy event fired")
+
+        // Log an ERROR message with a dramatic movie quote
+        Log.e(TAG, "Are you not entertained?! -Gladiator")
+    }
+}
